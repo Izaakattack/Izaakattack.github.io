@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
+
+:root {
+  --color-primario: green;
+  --color-secundario: red;
+  --color-extra: gray;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "DynaPuff", cursive;
+  line-height: 1.4; /*Espacio entre las secciones*/
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+ul {
+  list-style: none; /*Estilo de las vinetas en las listas*/
+}
+
+p {
+  margin: 5px 0; /*Margin trabaja de manera a las manecillas de reloj (arriba, derecha, abajo, izquierda)*/
+}
+
+img {
+  max-width: 100%;
+}
+
+section a {
+  color: white;
+}
+
+/* Nav-Bar */
+.navbar {
+  width: 100%;
+  heigth: 100%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: -16px 18px 26px 3px rgba(89, 87, 87, 0.42);
+}
+
+.navbar_container {
+  display: flex; /*acomoda de manera flexible los elementos*/
+  justify-content: space-between; /*justifica los elementos con un espacio entre ellos*/
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar ul {
+  align-items: justify;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 15px;
+  font-weight: 700px;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar a:hover{
+  color: var(--color-primario);
+}
+
+.navbar_logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.navbar-nav-left {
+  text-transform: uppercase;
+  flex: 1; /*con un valor se modifica (mueven) de forma horizontal*/
+  margin-left: 20px;
+}
+
+.navbar-nav-right li:nth-child(2) {
+  /*La pseudo-clase :nth-child() de CSS coincide con uno o más elementos en función de su posición entre un grupo de hermanos.*/
+  margin: 0 5px;
+}
+
+/* Modificacion del footer */
+.footer-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px 20px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.social svg {
+  width: 35px;
+  height: 35px;
+}
+
+.social a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.divider {
+  width: 95%;
+  height: 1px;
+  background-color: gray;
+  margin: 40px auto;
+}
+
+
+/* Modificación de cajas */
+.box{
+  margin-bottom:30px;
+}
+
+.box-inner{
+  max-width:700px;
+  margin: 0 auto;
+}
+
+.box-text{
+  max-width:500px;
+  text-align:center;
+  justify-self:center; /*justificarse a si mismo*/
+  padding 20px 15px;
+  margin: 0 auto;
+}
+
+
+.box-text .btn{
+  margin-top:20px;
+}
+
+/* Estilos del GRID */
+.grid-col-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr); /*modelo de columnas donde se repiten con valores de (numero de columnas, fr es una fraccion que ocupan los elementos(en este caso los elementos ocupan 1 fraccion cada uno))*/
+gap:2rem; /*Da un espacio entre las columnas*/
+  align-items:center;
+  justify-content:space-between;
+}
+
+.grid-reversed :first-child{ /*Cambiamos el orden de los elementos dentro del clasificador grid-reversed, iniciando por el primer hijo y en orden 1*/
+order:1;
+}
+
+.btn{
+  cursor: pointer; /*Cambia la propiedad del cursor (hace una manica al seleccionar un link*/
+  display: in-line-block;
+  background: none;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 7px 16px;  /*Padding-espacio de relleno; cuando tiene dos valores, el primero determina top-bottom y el segundo left-right*/
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.btn-dark-outline{
+  border-color: black;
+  color: #016241;
+}
+
+.btn-light-outline:hover, .btn-dark-outline:hover{
+  background-color: #0094FF;
+  color: white; 
+}
+
+
+.btn-light-outline{
+  border-color: white;
+  color: white;
+}
+
+.btn-dark{
+  background-color: #d40032;
+  color: white;
+}
+
+.box-a{
+  background-color: #016241;
+  color: white;
+  text-align: center;
+  
+}
+
+
+.box-b, .box-c{
+  background-color: #d40032;
+  color: white;
+}
+
+.text-xl{
+  max-width:100%;
+  text-align:center;
+  font-size: 70px;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.text-md{
+  text-align:center;
+  font-size: 30px;
+  margin: 15px auto;
+}
+
+.box-inner{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 15px 200px 70px;
